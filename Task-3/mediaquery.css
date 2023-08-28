@@ -1,0 +1,96 @@
+@media(max-width:1109px) {
+    .container .line {
+        display: none;
+    }
+  
+    .container {
+        flex-direction: column;
+    }
+  
+    .container .form {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+  
+    #name, #email, #website, #url{
+        width: 100%;
+    }
+  
+    .op-box {
+        width: 100%;
+    }
+  
+    .name,.email,.website,.image {
+        justify-content: space-around;
+    }
+  
+    .container .form form {
+        padding: 1.2rem;
+    }
+  }
+  
+  @media(max-width:729px) {
+  
+    .output .card{
+        width: 100%;
+    }
+  
+    #name, #email, #website, #url{
+        width: 100%;
+    }
+  }
+  
+  @media(max-width:680px){
+    .output .card{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;    
+        gap: 2.5rem;
+    }
+    .card img {
+        margin: auto;
+    }
+  }
+  
+  @media(max-width:450px) {
+    h1 {
+        font-size: 1.1rem;
+    }
+  
+    .container .form form{
+        gap:1.5rem;
+    }
+  
+    #name, #email, #website, #url{
+        font-size: 0.9rem;
+    }
+  
+    .name,.email,.website,.image,.gender,.skills {
+        display: contents;
+    }
+  
+    .name,.email,.website,.image,.gender,.skills{
+        font-size: 1rem;
+    }
+  
+    .text-val{
+        font-size: 1rem;
+        gap: 2rem;
+    }
+  
+    .button #submit{
+        padding: 0.2rem 1.6rem;
+        font-size: 1.1rem;
+    }
+  
+    .button #reset{
+        padding: 0.2rem 1.6rem;
+        font-size: 1.1rem;
+    }
+  
+    .output{
+        padding: 1rem;
+    }
+  }
