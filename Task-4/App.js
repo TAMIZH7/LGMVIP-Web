@@ -1,0 +1,35 @@
+import React, { useState } from "react";
+import "./styles.css";
+
+export default function App() {
+  const [users, setUsers] = useState([]);
+
+  const loadUser = async () => {
+    const response = await fetch("https://reqres.in/api/users?page=1");
+    const jsonResponse = await response.json();
+    setUsers(jsonResponse.data);
+  };
+
+  return (
+    <div>
+      <div className="header">
+        <h1 className="head-title">Task-2</h1>
+        <button className="head-btn" onClick={loadUser}>
+          Get users
+        </button>
+      </div>
+      <div className="user-space">
+        {users.map(({ id, email, first_name, last_name, avatar }) => (
+          <div className="card" style={{ width: "12rem" }} key={id}>
+            <img className="card-img-top" src={avatar} alt="card image top" />
+            <div className="card-body">
+              <h5 className="card-id">Id={id}</h5>
+              <h5 className="card-title">{`${first_name} ${last_name}`}</h5>
+              <p className="card-text">{email}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
